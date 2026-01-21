@@ -1,0 +1,32 @@
+[
+    {
+        "lab_result_id": "L001",
+        "encounter_id": "E001",
+        "patient_id": "P001",
+        "test_name": "Blood Pressure",
+        "test_value": 140,
+        "unit": "mmHg",
+        "normal_range": "120",
+        "result_date": "2024-12-01"
+    },
+    {
+        "lab_result_id": "L002",
+        "encounter_id": "E002",
+        "patient_id": "P002",
+        "test_name": "HbA1c",
+        "test_value": 8.2,
+        "unit": "%",
+        "normal_range": "<6.5",
+        "result_date": "2024-12-02"
+    },
+    {
+        "lab_result_id": "L003",
+        "encounter_id": "E003",
+        "patient_id": "P003",
+        "test_name": "FEV1",
+        "test_value": 2.1,
+        "unit": "L",
+        "normal_range": "3.0",
+        "result_date": "2024-12-03"
+    }
+]

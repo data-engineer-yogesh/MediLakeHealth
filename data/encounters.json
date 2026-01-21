@@ -1,0 +1,52 @@
+[
+    {
+        "encounter_id": "E001",
+        "patient_id": "P001",
+        "hospital_id": "H01",
+        "encounter_date": "2024-12-01",
+        "encounter_type": "OPD",
+        "admission_type": "Planned",
+        "discharge_date": "2024-12-01",
+        "updated_at": "2024-12-01T18:00:00"
+    },
+    {
+        "encounter_id": "E002",
+        "patient_id": "P002",
+        "hospital_id": "H01",
+        "encounter_date": "2024-12-02",
+        "encounter_type": "IPD",
+        "admission_type": "Emergency",
+        "discharge_date": "2024-12-05",
+        "updated_at": "2024-12-05T12:00:00"
+    },
+    {
+        "encounter_id": "E003",
+        "patient_id": "P003",
+        "hospital_id": "H02",
+        "encounter_date": "2024-12-03",
+        "encounter_type": "OPD",
+        "admission_type": "Planned",
+        "discharge_date": "2024-12-03",
+        "updated_at": "2024-12-03T16:00:00"
+    },
+    {
+        "encounter_id": "E004",
+        "patient_id": "P004",
+        "hospital_id": "H02",
+        "encounter_date": "2024-12-04",
+        "encounter_type": "IPD",
+        "admission_type": "Emergency",
+        "discharge_date": "2024-12-07",
+        "updated_at": "2024-12-07T11:00:00"
+    },
+    {
+        "encounter_id": "E005",
+        "patient_id": "P005",
+        "hospital_id": "H03",
+        "encounter_date": "2024-12-05",
+        "encounter_type": "OPD",
+        "admission_type": "Planned",
+        "discharge_date": "2024-12-05",
+        "updated_at": "2024-12-05T14:00:00"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "medication_id": "M001",
+        "patient_id": "P001",
+        "medication_name": "Amlodipine",
+        "dosage": "5mg",
+        "start_date": "2024-12-01",
+        "end_date": null
+    },
+    {
+        "medication_id": "M002",
+        "patient_id": "P002",
+        "medication_name": "Metformin",
+        "dosage": "500mg",
+        "start_date": "2024-12-02",
+        "end_date": null
+    },
+    {
+        "medication_id": "M003",
+        "patient_id": "P004",
+        "medication_name": "Aspirin",
+        "dosage": "75mg",
+        "start_date": "2024-12-04",
+        "end_date": "2024-12-10"
+    }
+]
