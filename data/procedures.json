@@ -1,0 +1,18 @@
+[
+    {
+        "procedure_id": "PR001",
+        "encounter_id": "E002",
+        "patient_id": "P002",
+        "procedure_code": "93000",
+        "procedure_desc": "ECG",
+        "procedure_date": "2024-12-02"
+    },
+    {
+        "procedure_id": "PR002",
+        "encounter_id": "E004",
+        "patient_id": "P004",
+        "procedure_code": "92928",
+        "procedure_desc": "Angioplasty",
+        "procedure_date": "2024-12-05"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "diagnosis_id": "D001",
+        "encounter_id": "E001",
+        "patient_id": "P001",
+        "diagnosis_code": "I10",
+        "diagnosis_desc": "Hypertension",
+        "diagnosis_date": "2024-12-01"
+    },
+    {
+        "diagnosis_id": "D002",
+        "encounter_id": "E002",
+        "patient_id": "P002",
+        "diagnosis_code": "E11",
+        "diagnosis_desc": "Type 2 Diabetes",
+        "diagnosis_date": "2024-12-02"
+    },
+    {
+        "diagnosis_id": "D003",
+        "encounter_id": "E003",
+        "patient_id": "P003",
+        "diagnosis_code": "J45",
+        "diagnosis_desc": "Asthma",
+        "diagnosis_date": "2024-12-03"
+    },
+    {
+        "diagnosis_id": "D004",
+        "encounter_id": "E004",
+        "patient_id": "P004",
+        "diagnosis_code": "I21",
+        "diagnosis_desc": "Myocardial Infarction",
+        "diagnosis_date": "2024-12-04"
+    },
+    {
+        "diagnosis_id": "D005",
+        "encounter_id": "E005",
+        "patient_id": "P005",
+        "diagnosis_code": "K21",
+        "diagnosis_desc": "GERD",
+        "diagnosis_date": "2024-12-05"
+    }
+]
