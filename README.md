@@ -1,22 +1,22 @@
-# 🏥 MediLake Health – EHR Delta Lakehouse Platform
+# MediLake Health – EHR Delta Lakehouse Platform
 
-An end-to-end **Healthcare Electronic Health Record (EHR) Lakehouse** built using **Databricks & Delta Lake**, designed to practice **advanced Delta pipelines, performance optimization, and exam-ready design patterns**.
+**Overview**
 
-This project follows a **Medallion Architecture** - (Bronze–Silver–Gold Lakehouse architecture), similar to real-world healthcare analytics platforms.
+MediLake Health is an end-to-end Healthcare Electronic Health Record (EHR) Delta Lakehouse platform built using Databricks and Delta Lake.  
+The project is designed to practice advanced Delta Lake pipelines, performance optimization techniques, and certification-aligned design patterns commonly used in real-world healthcare analytics platforms.
 
----
-
-## 🚀 Project Objectives
-
-- Build a production-style **EHR Data Lakehouse**
-- Master **Delta Lake MERGE, SCD Type-2, and CDC patterns**
-- Apply **partitioning, Z-Ordering, OPTIMIZE, and VACUUM**
-- Create **analytics-ready Gold tables**
-- Prepare for **Databricks Data Engineer certification & interviews**
+The implementation follows the Medallion Architecture (Bronze–Silver–Gold), reflecting production-grade healthcare data platforms.
 
 ---
 
-## 🧱 Architecture Overview
+## Project Objectives
+- Build a production-style EHR Data Lakehouse
+- Implement Delta Lake MERGE, CDC, and SCD Type-2 patterns
+- Apply partitioning, Z-Ordering, OPTIMIZE, and VACUUM
+- Create analytics-ready Gold tables
+- Prepare for Databricks Data Engineer certification and technical interviews
+
+## Architecture Overview
 
 Raw JSON (EHR Data)
 ↓
@@ -57,133 +57,122 @@ medilake-health-ehr-lakehouse/
 
 ```
 
-
 ---
 
-## 🥉 Bronze Layer – Raw Ingestion
+## Bronze Layer – Raw Ingestion
 
-**Purpose**
-- Store raw EHR data as-is
-- Enable replayability and auditing
+### Purpose
+- Store raw EHR data without modification
+- Enable replayability, traceability, and auditing
 
-**Key Features**
+### Key Features
 - JSON ingestion using PySpark
 - Schema inference
 - Append-only Delta tables
 - Ingestion timestamp tracking
 
-**Bronze Tables**
-- `bronze.patients`
-- `bronze.encounters`
-- `bronze.diagnoses`
-- `bronze.procedures`
-- `bronze.lab_results`
-- `bronze.medications`
+### Bronze Tables
+- bronze.patients
+- bronze.encounters
+- bronze.diagnoses
+- bronze.procedures
+- bronze.lab_results
+- bronze.medications
 
 ---
 
-## 🥈 Silver Layer – Clean & Conform
+## Silver Layer – Clean and Conformed Data
 
-**Purpose**
-- Apply business rules
-- Handle updates and late-arriving data
-- Create analytics-ready dimensions & facts
+### Purpose
+- Apply business and data quality rules
+- Handle updates, late-arriving records, and CDC
+- Create clean dimensions and fact tables
 
-**Key Implementations**
-- **SCD Type-2** for patient demographics
-- **MERGE INTO** for CDC handling
+### Key Implementations
+- SCD Type-2 for patient demographic changes
+- MERGE INTO for CDC handling
 - Deduplication using window functions
 - Active medication logic
 
-**Silver Tables**
-- `silver.patients_scd` (SCD Type-2)
-- `silver.encounters_clean`
-- `silver.diagnoses_clean`
-- `silver.lab_results_clean`
-- `silver.medications_clean`
+### Silver Tables
+- silver.patients_scd
+- silver.encounters_clean
+- silver.diagnoses_clean
+- silver.lab_results_clean
+- silver.medications_clean
 
 ---
 
-## ⚡ Delta Lake Performance Optimization
+## Delta Lake Performance Optimization
 
-**Techniques Used**
+### Techniques Used
 - Partitioning on date-based columns
-- Z-Ordering on high-cardinality filters
+- Z-Ordering on high-cardinality filter columns
 - OPTIMIZE for small file compaction
 - VACUUM for storage cleanup
 - Partition-pruned MERGE operations
 
-**Optimization Examples**
-- Partition by `encounter_date`, `result_date`
-- Z-ORDER by `patient_id`, `encounter_id`
+### Optimization Examples
+- Partition by encounter_date and result_date
+- Z-ORDER by patient_id and encounter_id
 
 ---
 
-## 🥇 Gold Layer – Analytics & Reporting
+## Gold Layer – Analytics and Reporting
 
-**Purpose**
+### Purpose
 - Provide fast, business-ready datasets
-- Minimize joins for dashboards & reporting
+- Minimize joins for BI dashboards and reporting
 
-**Gold Tables**
-- `gold.patient_clinical_summary`
-- `gold.hospital_utilization_metrics`
-- `gold.disease_prevalence_daily`
-- `gold.lab_abnormal_trends`
+### Gold Tables
+- gold.patient_clinical_summary
+- gold.hospital_utilization_metrics
+- gold.disease_prevalence_daily
+- gold.lab_abnormal_trends
 
-**Use Cases**
+### Use Cases
 - Patient-level clinical summaries
-- Hospital admission & LOS analysis
-- Disease prevalence trends
+- Hospital admission and length-of-stay analysis
+- Disease prevalence trend analysis
 - Lab abnormality monitoring
 
 ---
 
-## 🧠 Key Concepts Practiced
-
+## Key Concepts Practiced
 - Delta Lake ACID transactions
 - SCD Type-2 implementation
-- MERGE vs INSERT vs OVERWRITE
-- Partitioning vs Z-Ordering
-- Bronze–Silver–Gold design principles
-- Exam-style decision rules
+- MERGE versus INSERT versus OVERWRITE
+- Partitioning versus Z-Ordering
+- Bronze–Silver–Gold architecture principles
+- Exam-style decision-making scenarios
 
 ---
 
-## 🛠️ Technologies Used
-
-- **Databricks**
-- **Apache Spark (SQL & PySpark)**
-- **Delta Lake**
-- **JSON**
-- **SQL Analytics**
-
----
-
-## 🎯 Who This Project Is For
-
-- Aspiring **Data Engineers**
-- Databricks **certification candidates**
-- Engineers preparing for **Lakehouse design interviews**
-- Anyone learning **Delta Lake performance tuning**
+## Technologies Used
+- Databricks
+- Apache Spark (SQL and PySpark)
+- Delta Lake
+- JSON
+- SQL Analytics
 
 ---
 
-
+## Intended Audience
+- Aspiring data engineers
+- Databricks certification candidates
+- Engineers preparing for Lakehouse architecture interviews
+- Professionals learning Delta Lake performance optimization
 
 ---
 
-## 📬 Future Enhancements
-
+## Future Enhancements
 - Streaming ingestion using Auto Loader
-- Data quality checks (expectations)
+- Data quality checks and expectations
 - Unity Catalog integration
 - BI dashboard integration
 
 ---
 
-## ⭐ If You Found This Useful
+## License
+This project is intended for learning and demonstration purposes.
 
-Give this repo a ⭐ and feel free to fork or extend it!
-
-Happy Learning 🚀
